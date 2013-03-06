@@ -37,7 +37,7 @@ remote_file "/usr/local/src/#{basename}.tar.bz2" do
   backup false
   mode '0644'
   checksum node['phantomjs']['checksum'] if node['phantomjs']['checksum']
-  source "https://phantomjs.googlecode.com/files/#{basename}.tar.bz2"
+  source "#{node['phantomjs']['source']}/#{basename}.tar.bz2"
 end
 
 # Install phantomjs
